@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travle_app/widgets/custom_button.dart';
 import 'package:travle_app/widgets/custom_icon.dart';
 import 'package:travle_app/widgets/custom_text_field.dart';
 
@@ -70,15 +71,31 @@ class HomePage extends StatelessWidget {
                     const SizedBox(
                       width: 45,
                     ),
-                    CustomIcon(
-                        size: 40, icon: Icons.alarm, onPressed: () {}),
+                    CustomIcon(size: 40, icon: Icons.alarm, onPressed: () {}),
                     const SizedBox(
                       width: 45,
                     ),
-                    CustomIcon(
-                        size: 40, icon: Icons.message, onPressed: () {}),
+                    CustomIcon(size: 40, icon: Icons.message, onPressed: () {}),
                   ],
                 ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              const SizedBox(
+                width: 10,
+              ),
+              CustomButton(
+                text: 'go',
+                onTap: () {},
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              CustomButton(
+                text: 'go',
+                onTap: () {},
               ),
             ],
           ),
