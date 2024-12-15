@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travle_app/widgets/custom%20card.dart';
+import 'package:travle_app/widgets/custom_card.dart';
 import 'package:travle_app/widgets/custom_button.dart';
 import 'package:travle_app/widgets/custom_icon.dart';
 import 'package:travle_app/widgets/custom_text_field.dart';
@@ -72,14 +72,14 @@ class HomePageBody extends StatelessWidget {
               ),
               CustomButton(
                 text: 'BACK',
-                onTap: () {},
+                onTap: () {Navigator.pop(context);},
               ),
               const SizedBox(
                 width: 10,
               ),
               CustomButton(
                 text: 'NEXT',
-                onTap: () {},
+                onTap: () {Navigator.pushNamed(context, '/travelpage');},
               ),
             ],
           ),

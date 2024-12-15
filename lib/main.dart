@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:travle_app/pages/home_page.dart';
 import 'package:travle_app/pages/login_page.dart';
 import 'package:travle_app/pages/sign_page.dart';
-import 'package:travle_app/pages/welcom-Page.dart';
+import 'package:travle_app/pages/travel_page.dart';
+import 'package:travle_app/pages/welcom_page.dart';
 
 void main() {
   runApp(DevicePreview(
@@ -25,6 +26,7 @@ class TravelApp extends StatelessWidget {
     '/login': (context) => const Login(),
     '/signup': (context) => const Sign(),
     '/homepage':(context) => const HomePage(),
+    '/travelpage':(context) => const TravelPage(),
     }
      
     );
