@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:travle_app/constants.dart';
+import 'package:travle_app/pages/home_page.dart';
+import 'package:travle_app/pages/login_page.dart';
 
 class Sign extends StatelessWidget {
   const Sign({super.key});
@@ -44,7 +47,8 @@ class Sign extends StatelessWidget {
                       height: 10,
                     ),
                     Container(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 5),
                       width: 250,
                       decoration: BoxDecoration(
                           color: Colors.orange[100],
@@ -63,7 +67,8 @@ class Sign extends StatelessWidget {
                     ),
                     Container(
                       margin: const EdgeInsets.symmetric(vertical: 27),
-                      padding: const EdgeInsets.symmetric(vertical: 5),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 5),
                       width: 250,
                       decoration: BoxDecoration(
                           color: Colors.orange[100],
@@ -87,7 +92,12 @@ class Sign extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/homepage');
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                child: const HomePage(),
+                                type: PageTransitionType.leftToRight,
+                                duration: Durations.long2));
                       },
                       style: ButtonStyle(
                         backgroundColor:
@@ -112,7 +122,12 @@ class Sign extends StatelessWidget {
                         const Text(" Already have an account ?"),
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, '/login');
+                            Navigator.push(
+                                context,
+                                PageTransition(
+                                    child: const Login(),
+                                    type: PageTransitionType.rightToLeft,
+                                    duration: Durations.long2));
                           },
                           child: const Text(" Log in",
                               style: TextStyle(fontWeight: FontWeight.bold)),

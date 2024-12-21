@@ -1,8 +1,9 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:travle_app/constants.dart';
+import 'package:travle_app/pages/login_page.dart';
+import 'package:travle_app/pages/sign_page.dart';
 
 class Welcom extends StatelessWidget {
   const Welcom({super.key});
@@ -42,7 +43,12 @@ class Welcom extends StatelessWidget {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/login');
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              child: const Login(),
+                              type: PageTransitionType.leftToRight,
+                              duration: Durations.long2));
                     },
                     style: ButtonStyle(
                       backgroundColor:
@@ -63,7 +69,12 @@ class Welcom extends StatelessWidget {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/signup');
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              child: const Sign(),
+                              type: PageTransitionType.leftToRight,
+                              duration: Durations.long2));
                     },
                     style: ButtonStyle(
                       backgroundColor:

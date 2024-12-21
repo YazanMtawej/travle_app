@@ -7,25 +7,27 @@ class TravelPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-       backgroundColor: kPrimaryColor,
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: const Text(
-            "Travel ",
-            style: TextStyle(fontSize: 30, color: Colors.white),
+    return SafeArea(
+      child: Scaffold(
+         backgroundColor: kPrimaryColor,
+          appBar: AppBar(
+            backgroundColor: Colors.blue,
+            title: const Text(
+              "Travel ",
+              style: TextStyle(fontSize: 30, color: Colors.white),
+            ),
+            centerTitle: true,
+            actions: [
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.search,size: 40,
+                    color: Colors.black,
+                  ))
+            ],
           ),
-          centerTitle: true,
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.search,size: 40,
-                  color: Colors.black,
-                ))
-          ],
-        ),
-        body:const TravelPageBody(),
+          body:const TravelPageBody(),
+      ),
     );
   }
 }
