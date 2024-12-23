@@ -18,6 +18,8 @@ class CustomIcon extends StatelessWidget {
       child: Center(
         child: IconButton(
             color: Colors.orange,
+            hoverColor: Colors.orange[200],
+            highlightColor: Colors.orangeAccent,
             onPressed: onPressed,
             icon: Icon(
               icon,
